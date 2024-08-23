@@ -19,6 +19,6 @@ export const POST = async (req: NextRequest) => {
 
     return NextResponse.json({ message: "Email sent successfully" });
   } catch (error: any) {
-    return NextResponse.json({ message: error.message });
+    return NextResponse.json({ message: error.message }, { status: 400 });
   }
 };
